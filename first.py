@@ -1,0 +1,6 @@
+print("welcome!")
+print("Hello, World!")
+print("Hello, Beautiful World!")
+print("Happy Coding!")
+print("Start!")
+print("Level up!")
