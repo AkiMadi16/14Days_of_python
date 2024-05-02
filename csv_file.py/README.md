@@ -53,3 +53,35 @@ In this example, each row variable is a dictionary where you can access values b
 - python allows sorting the total we take as counts
 - https://docs.python.org/3/howto/sorting.html
 - check `sorted` function in the python documentation.
+
+# Relational Databases
+
+- Relational databases store data in rows and columns in structures called tables.
+- SQL allows for four types of commands:
+        Create
+        Read
+        Update
+        Delete
+
+- created a SQL database at the terminal by typing 
+ 
+           $ sqlite favorites.db 
+           $ favorites.db
+           sqlite3> .mode csv
+           sqlite3> .import favorites.csv favorites
+           sqlite3> .schema
+           sqlite3> SELECT columns FROM table;
+            ** ^--- error here
+           sqlite3> SELECT * FROM favorites;
+           sqlite3> SELECT title FROM favorites;
+           sqlite3> SELECT COUNT(title) FROM favorites;
+           sqlite3> SELECT COUNT(DISTINCT(title)) FROM favorites;
+           sqlite3> SELECT COUNT(*) FROM favorites WHERE title = 'Friends'
+
+           🌟 To exit sqlite3 press control + D or exit
+
+
+## 1. Modified code 🔡 → [db.py](https://github.com/AkiMadi16/14Days_of_python/blob/main/csv_file.py/db.py) 
+- CS50 library will assist with the complicated steps of utilizing SQL within your Python code.
+- line that begins with rows executes SQL commands utilizing `db.execute`
+- `rows` is returned as a list of dictionaries. In this case, there is only one result, one row, returned to the rows list as a dictionary.
